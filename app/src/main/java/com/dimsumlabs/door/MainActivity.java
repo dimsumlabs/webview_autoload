@@ -9,6 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.WebChromeClient;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         WebView view = (WebView) findViewById(R.id.activity_main);
         view.setWebViewClient(new WebViewClient());
+        view.setWebChromeClient(new WebChromeClient());
         view.getSettings().setJavaScriptEnabled(true);
         view.loadUrl(sb.toString());
 
